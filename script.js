@@ -33,10 +33,9 @@ function itemClickHandle (event){
 // Получение такста из инпута при нажатии "Enter"
 inputEl.addEventListener("keydown", (event)=>{
 
-    if(event.code !== "Enter"){
+    if(event.code !== "Enter" || inputEl.value === ""){
         return
     }
-   
     
     // Отрисовка задачи
     renderTask(makeTaskMarkup(inputEl.value));
@@ -65,7 +64,13 @@ inputEl.addEventListener("keydown", (event)=>{
     })
 })
 
+
+// Кнопка "Добавить задачу"
 addBtn.addEventListener("click", (event)=>{
+
+    if(inputEl.value === ""){
+        return
+    }
     // Отрисовка задачи
     renderTask(makeTaskMarkup(inputEl.value));
     // Сброс поля ввода инпута

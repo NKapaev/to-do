@@ -25,7 +25,6 @@ body {
     padding: 20px 30px 50px;
     margin-bottom: 40px;
     max-width: 100%;
-    /* border: 2px solid #3a3a3c; */
     border-radius: 10px;
     width: 80%;
     box-shadow: 5px 5px 20px -3px rgba(0, 0, 0, 0.71);
@@ -60,12 +59,19 @@ body {
 
 .addBtn {
     font-size: inherit;
-    font-family: 'Caveat', cursive;
+    font-family: inherit;
+    line-height: 0.8;
 
     background-color: #d1d1d6;
     border: 2px solid #3a3a3c;
     border-radius: 15px;
 
+    transition: all 250ms linear;
+}
+
+.addBtn:hover,
+.addBtn:focus {
+    background-color: #b2b2b8;
 }
 
 
@@ -150,4 +156,8 @@ body {
     text-align: center;
 
     background-color: #bbbbbd;
+}
+
+.footer-link {
+    color: inherit;
 }
