@@ -7,9 +7,7 @@
 body {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
-
     min-height: 100vh;
     font-family: 'Caveat', cursive;
     font-size: 24px;
@@ -24,7 +22,7 @@ body {
     background: #d1d1d6;
     padding: 20px 30px 50px;
     margin-bottom: 40px;
-    max-width: 100%;
+    width: 100%;
     border-radius: 10px;
     width: 80%;
     box-shadow: 5px 5px 20px -3px rgba(0, 0, 0, 0.71);
@@ -39,8 +37,8 @@ body {
 
 .input-container {
     display: flex;
-    margin: 0 auto;
-    width: 80%;
+    justify-content: space-between;
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -87,13 +85,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 80%;
+
 }
 
 .task-item {
     display: flex;
     align-items: center;
-    max-height: auto;
 
 
     padding: 10px 10px;
@@ -150,8 +147,8 @@ body {
 
 .footer {
     margin-top: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     width: 100%;
     text-align: center;
 
