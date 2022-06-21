@@ -30,6 +30,17 @@ body {
 
 }
 
+.header-link {
+    color: inherit;
+
+    transition: all 250ms linear;
+}
+
+.header-link:hover,
+.header-link:focus {
+    color: #545457;
+}
+
 .list-title {
     text-align: center;
     margin-bottom: 20px;
@@ -157,4 +168,10 @@ body {
 
 .footer-link {
     color: inherit;
+    transition: all 250ms linear;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+    color: #545457;
 }
