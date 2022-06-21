@@ -38,18 +38,37 @@ body {
     margin-bottom: 20px;
 }
 
+.input-container {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 20px;
+}
 
 .new-task {
     font-family: inherit;
     font-size: inherit;
     background-color: #d1d1d6;
-    width: 80%;
+    width: 100%;
     display: block;
-    margin: 0 auto 15px;
-    padding: 10px 25px;
+    padding: 10px 10px;
+    margin-right: 20px;
     border: 2px solid #3a3a3c;
-    border-radius: 25px;
+    border-radius: 15px;
+
 }
+
+.addBtn {
+    font-size: inherit;
+    font-family: 'Caveat', cursive;
+
+    background-color: #d1d1d6;
+    border: 2px solid #3a3a3c;
+    border-radius: 15px;
+
+}
+
+
 
 .new-task:focus,
 .new-task:hover {

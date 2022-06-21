@@ -1,6 +1,7 @@
 const inputEl = document.querySelector(".new-task");
 const taskList = document.querySelector(".task-list");
 const taskLinks = taskList.querySelectorAll(".task-link")
+const addBtn = document.querySelector(".addBtn")
 
 let inputText = ""
 
@@ -26,6 +27,7 @@ function itemClickHandle (event){
     event.currentTarget.classList.toggle("checked")
     console.log(event.currentTarget)
 }
+
                 // Слушатели
 
 // Получение такста из инпута при нажатии "Enter"
@@ -36,6 +38,34 @@ inputEl.addEventListener("keydown", (event)=>{
     }
    
     
+    // Отрисовка задачи
+    renderTask(makeTaskMarkup(inputEl.value));
+    // Сброс поля ввода инпута
+    inputEl.value = ''
+
+    // Очищает слушателей
+    const taskItems = document.querySelectorAll(".task-item");
+    taskItems.forEach(item => {
+    item.removeEventListener("click", itemClickHandle)
+    })
+    
+   
+    // Отменят перезагрузку при клике на ссылку
+    const taskLinks = taskList.querySelectorAll(".task-link")
+    taskLinks.forEach(item => {
+        item.addEventListener("click", (event)=>{
+            event.preventDefault();
+        })
+        
+    })
+
+    
+    taskItems.forEach(item => {
+        item.addEventListener("click", itemClickHandle)
+    })
+})
+
+addBtn.addEventListener("click", (event)=>{
     // Отрисовка задачи
     renderTask(makeTaskMarkup(inputEl.value));
     // Сброс поля ввода инпута
