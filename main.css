@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+    min-height: 100vh;
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    line-height: 0.8;
+    background-color: #d1d1d6;
+    padding-top: 30px;
+
+
+}
+
+.container {
+    background: #d1d1d6;
+    padding: 20px 30px 50px;
+    margin-bottom: 40px;
+    max-width: 100%;
+    /* border: 2px solid #3a3a3c; */
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 5px 5px 20px -3px rgba(0, 0, 0, 0.71);
+
+
+}
+
+.list-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.new-task {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #d1d1d6;
+    width: 80%;
+    display: block;
+    margin: 0 auto 15px;
+    padding: 10px 25px;
+    border: 2px solid #3a3a3c;
+    border-radius: 25px;
+}
+
+.new-task:focus,
+.new-task:hover {
+    outline: #1c1c1e;
+}
+
+.task-list {
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    max-height: auto;
+
+
+    padding: 10px 10px;
+    border: 2px solid #3a3a3c;
+    border-radius: 10px;
+}
+
+.task-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.task-link {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    align-items: center;
+    user-select: none;
+
+    transform: translateX(-30px);
+
+    transition: all 250ms linear;
+}
+
+.task-item.checked .task-link {
+    transform: translateX(0);
+}
+
+
+
+.checked {
+    text-decoration: line-through;
+}
+
+.task-indicator {
+    display: flex;
+    flex-shrink: 0;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solod #3a3a3c;
+    border-radius: 50%;
+
+    fill: #3a3a3c;
+
+    opacity: 0;
+    transition: opacity 250ms linear;
+}
+
+
+
+.task-item.checked .task-indicator {
+    opacity: 1;
+}
+
+.footer {
+    margin-top: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+
+    background-color: #bbbbbd;
+}
